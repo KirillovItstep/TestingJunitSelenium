@@ -16,7 +16,7 @@ public class GoogleTest {
                 "C:\\Users\\vadim\\IdeaProjects\\TestingJunitSelenium\\src\\main\\resources\\chromedriver.exe");
 
         ChromeOptions chromeOptions = new ChromeOptions();
-        String proxyadd = "99.1.4844.51:1200";
+        String proxyadd = "99.0.4844.51:1200";
         Proxy proxy = new Proxy();
         proxy.setHttpProxy(proxyadd);
         proxy.setSslProxy(proxyadd);
