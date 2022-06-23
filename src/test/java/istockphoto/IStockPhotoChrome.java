@@ -12,9 +12,9 @@ import org.openqa.selenium.support.ui.Select;
 import java.util.List;
 
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
-public class IStockPhotoTest {
-    private static WebDriver driver = null;
-    private static final String baseUrl = "https://www.istockphoto.com/ru/";
+public class IStockPhotoChrome {
+    protected static WebDriver driver = null;
+    protected static final String baseUrl = "https://www.istockphoto.com/ru/";
 
     @Test
     @Order(1)
@@ -53,6 +53,7 @@ public class IStockPhotoTest {
     //Нажать на ссылку "Присоединиться"
     public void join() {
         driver.get(baseUrl+"join");
+        Assertions.assertTrue(driver.getTitle().toUpperCase().contains("Регистрация".toUpperCase()));
     }
 
     @Test
@@ -80,6 +81,7 @@ public class IStockPhotoTest {
     //Выйти
     public void signout() {
         driver.get(baseUrl+"sign-out");
+        Assertions.assertTrue(driver.getTitle().toUpperCase().contains("Stock Images".toUpperCase()));
     }
 
     @Test
@@ -87,6 +89,7 @@ public class IStockPhotoTest {
     //Войти заново
     public void signin() {
         driver.get(baseUrl+"sign-in");
+        Assertions.assertTrue(driver.getTitle().toUpperCase().contains("sign-in".toUpperCase()));
     }
 
     @Test
@@ -99,5 +102,6 @@ public class IStockPhotoTest {
         password.sendKeys("Hst121121");
         WebElement button = driver.findElement(By.xpath("//*[@id='sign_in']"));
         button.click();
+        Assertions.assertTrue(driver.getTitle().toUpperCase().contains("Stock Images".toUpperCase()));
     }
 }
