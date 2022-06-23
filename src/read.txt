@@ -1,0 +1,3 @@
+$x("//li/a")
+$x("//*[@id='popular_categories']")
+$x("//ul[@id='popular_categories']/li/a")[0].innerText
