@@ -49,7 +49,6 @@ public class IStockPhotoChrome {
 
     @Test
     @Order(3)
-    @Disabled
     //Нажать на ссылку "Присоединиться"
     public void join() {
         driver.get(baseUrl+"join");
@@ -58,7 +57,6 @@ public class IStockPhotoChrome {
 
     @Test
     @Order(4)
-    @Disabled
     //Ввести учетные данные
     public void register() {
         WebElement email = driver.findElement(By.xpath("//*[@id='register_email']"));
@@ -77,7 +75,6 @@ public class IStockPhotoChrome {
 
     @Test
     @Order(5)
-    @Disabled
     //Выйти
     public void signout() {
         driver.get(baseUrl+"sign-out");
